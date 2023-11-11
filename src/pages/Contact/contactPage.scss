@@ -1,0 +1,108 @@
+.contact {
+    margin-top: 150px;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 15px;
+    }
+    
+    &__title {
+        font-size: 50px;
+        color: $textColor;
+        text-align: center;
+        font-style: italic;
+    }
+    
+    &__subtitle {
+        font-size: 30px;
+        color: $textColor;
+        font-style: italic;
+        
+        span {
+            color: $textColor;
+            font-weight: 700;
+            font-size: 32px;
+        }
+    }
+    
+    &__message {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        height: 700px;
+        justify-content: space-between;
+        background: $accentColor2;
+        box-shadow: 0 0 6px 2px $textColor;
+    }
+    
+    &__inp {
+        border-bottom: 2px solid $baseColor;
+    }
+    
+    &__form {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;    
+    }
+    
+    &__inp-name {
+        padding: 10px;
+        font-size: 22px;
+    }
+    
+    &__inp-email {
+        padding: 10px;
+        font-size: 22px;
+    }
+    
+    &__text-area {
+        padding: 10px;
+        height: 100px;
+        font-size: 20px;
+        outline: none;
+        border: 2px solid $baseColor;
+    }
+    
+    &__btn {
+        padding: 20px;
+        font-size: 22px;
+        background: $accentColor2;
+        border: 2px solid $baseColor;
+        transition: 400ms;
+        color: $textColor;
+        
+        &:hover {
+            background: $baseColor;
+            color: $accentColor2;
+        }
+    }
+
+    &__socials {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        height: 700px;
+        justify-content: space-around;
+        background: $accentColor2;
+        box-shadow: 0 0 6px 2px $textColor;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        &-link {
+            font-size: 20px;
+            color: $baseColor;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+    
+}

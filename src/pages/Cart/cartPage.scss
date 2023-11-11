@@ -1,0 +1,135 @@
+.cart {
+    padding: 40px 0;
+    margin-top: 150px;
+    position: relative;
+
+    &__yesOrNo {
+        text-align: center;
+        font-size: 50px;
+        color: $baseColor;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__product {
+        display: flex;
+        background: $accentColor2;
+        width: 80%;
+        gap: 30px;
+        border-radius: 14px;
+        padding: 20px;
+        
+        &-img {
+            box-shadow: 0 0 14px 3px $mainColor;
+            width: 200px;
+            height: 200px;
+            border-radius: 14px;
+        }
+
+        &-about {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        &-brand {
+            font-size: 20px;
+            color: $textColor;
+        }
+
+        &-desc {
+            font-size: 20px;
+        }
+
+        &-title {
+            font-size: 30px;
+            color: $baseColor;
+        }
+
+        &-price {
+            font-size: 24px;
+            color: $baseColor;
+        }
+
+        &-control {
+            display: flex;
+            justify-content: end;
+            align-items: flex-end;
+            gap: 12px;
+            flex-grow: 1;
+
+        }
+
+        &-add,
+        &-delete {
+            padding: 5px 10px;
+            cursor: pointer;
+            box-shadow: 0 0 14px 4px $mainColor;
+            border-radius: 5px;
+            color: $accentColor2;
+        }
+
+        &-add {
+            background: $baseColor;
+        }
+
+        &-delete {
+            border: 1px solid $accentColor;
+            color: $accentColor;
+            font-weight: 700;
+            transition: 400ms;
+
+            &:hover {
+                background: $accentColor;
+                color: $accentColor2;
+            }
+        }
+    }
+
+    &__total {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100svh;
+        width: 15%;
+        margin-top: 100px;
+        padding: 40px 15px;
+        background: $accentColor2;
+        box-shadow: 0 0 6px 2px $textColor;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+
+        &-txt {
+            color: $accentColor2;
+            background: $baseColor;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        &-buy {
+            color: $baseColor;
+            background: $accentColor2;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid $baseColor;
+            border-radius: 4px;
+            width: 100%;
+            transition: 400ms;
+            cursor: pointer;
+
+            &:hover {
+                background: $baseColor;
+                color: $accentColor2;
+            }
+        }
+    }
+}

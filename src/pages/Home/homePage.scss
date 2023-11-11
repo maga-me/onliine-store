@@ -1,0 +1,219 @@
+.opt {
+    margin-top: 150px;
+
+    .sort__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__num {
+        padding: 12px 10px;
+        background: $accentColor2;
+        height: 44px;
+        
+        span {
+            font-weight: 700;
+            color: $baseColor;
+            font-size: 18px;
+        }
+    }
+    
+    &__range {
+        width: 600px;
+        margin: auto 16px;
+        text-align: center;
+        position: relative;
+
+        &-btn,
+        &-inp[type=range] {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        &-inp[type=range]::-webkit-slider-thumb {
+            z-index: 2;
+            position: relative;
+            top: 2px;
+            margin-top: -7px;
+        }
+    }
+    
+}
+
+.products {
+    padding: 40px 0;
+    
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    
+    &__card {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 300px;
+        height: 440px;
+        padding: 19px 16px 10px;
+        background: $accentColor2;
+        
+        &-rating {
+            background: $baseColor;
+            position: absolute;
+            right: 0;
+            top:    0;
+            display: grid;
+            place-items: center;
+            color: $accentColor2;
+            padding: 10px;
+            height: 40px;
+            border-radius: 0 0 0 4px;
+        }
+    }
+
+    &__sale {
+        position: absolute;
+        padding: 10px 20px;
+        color: $accentColor2;
+        background: $textColor;
+        right: 0;
+        top: 0;
+    }
+
+    &__rout {
+        height: 65%;
+        z-index: -1;
+        margin-bottom: 22px;
+        box-shadow: 0 0 12px 2px $mainColor;
+    }
+    
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__name {
+        color: $textColor;
+        font-size: 18px;
+    }
+
+    &__inf {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price {
+        font-size: 20px;
+    }
+
+    &__btn {
+        padding: 5px 20px;
+        border: 1px solid $baseColor;
+        background: transparent;
+        cursor: pointer;
+        transition: 400ms;
+        color: $baseColor;
+
+
+        &:hover {
+            background: $baseColor;
+            color: $accentColor2;
+        }
+    }
+
+    &__category {
+        padding: 5px;        
+        color: $mainColor;
+        font-size: 18px;
+        transition: 250ms;
+        
+        &:hover {
+            background: $baseColor;
+            color: $accentColor2;
+        }
+    }
+    
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+
+        &-page {
+            background: $accentColor2;
+            border: 1px solid $baseColor;
+            color: $baseColor;
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: 400ms;
+            
+            &.selected {
+                background: $baseColor;
+                color: $accentColor2;
+            }
+            
+            &:hover {
+                background: $baseColor;
+                color: $accentColor2;
+            }
+        }
+
+        &-btn {
+            height: 40px;
+            width: 40px;
+            background: $baseColor;
+            color: $accentColor2;
+            border: 2px solid $baseColor;
+
+        }
+
+        .prev {
+            &.active {
+                background: $accentColor2;
+
+            }
+        }
+        .next {
+            &.active {
+                background: $accentColor2;
+
+            }
+        }
+    }
+}
+
+.sort {
+    &__item {
+        padding: 12px 10px;
+        background: $accentColor2;
+        cursor: pointer;
+    }
+    
+    &__menu {
+        z-index: -1;
+        opacity: 0;
+        
+        &.active {
+            z-index: 1;
+            opacity: 1;
+        }
+        
+    }
+}
